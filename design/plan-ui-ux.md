@@ -114,51 +114,74 @@ Startup/upbeat:
 - Icons: Very frequent
 - Shadows: Subtle shadows are frequent. Glows are becoming modern.
 - Border radius: Border-radius is very common.
-- Layouts: Rows of cards and Zpatterns are usual, as well as animations.
+- Layouts: Rows of cards and Z-patterns are usual, as well as animations.
 
 ## Sections for each page
 
 - /
 
+  - Navigation
   - Hero
-  - Feature Row
-  - CTA
+  - Problem
+  - Amplify
+  - Story
+  - Testimonial
+  - Offer
+  - Response (CTA)
   - Footer
 
 - /cart
 
-  - Feature Row
-  - CTA
+  - Navigation
+  - Cart Items
+  - Cart total summary
+  - Delete cart item
+  - Update cart item
   - Footer
 
 - /product
+  (All products are shown)
 
-  - Feature Row
-  - CTA
+  - Navigation
+  - Grid with products
+  - Product name and price
+  - Filter by price
   - Footer
 
 - /product/:productId
 
-  - Feature Row
-  - CTA
+  - Navigation
+  - Product name
+  - Product description
+  - Product rates
+  - Product comments
   - Footer
 
-- /order/new
+- /checkout
 
-  - CTA
+  - Navigation
+  - Cart Summary
+  - User info
+    - Address
+    - Email
+    - Phone number
+  - Confirm checkout and pay
   - Footer
 
 - /order/:orderId
 
-  - Feature Row
+  - Navigation
+  - Items in order
+    - Quantity
+    - Total price
+  - Where order was sent
   - Footer
 
 - /start
 
-  - CTA
+  - Navigation
+  - Form with user name
   - Footer
-
-# Sketch
 
 # Design and build
 
