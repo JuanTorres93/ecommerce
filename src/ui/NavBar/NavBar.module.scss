@@ -1,0 +1,40 @@
+@use "../../variables.scss" as *;
+
+.navbar {
+  background-color: $color-grey-5;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+    li {
+      margin-right: $spacing-md;
+      padding: $spacing-md $spacing-sm;
+
+      &:first-child {
+        margin-right: auto;
+        margin-left: $spacing-md;
+      }
+
+      &:last-child {
+        margin-left: auto;
+        margin-right: $spacing-md;
+      }
+
+      a,
+      a:link,
+      a:visited {
+        color: $color-grey-1;
+        text-decoration: none;
+        font-size: $font-size-md;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $color-primary-tint-1;
+        }
+      }
+    }
+  }
+}
