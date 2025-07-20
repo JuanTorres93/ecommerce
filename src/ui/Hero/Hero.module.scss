@@ -1,0 +1,63 @@
+@use "../../variables.scss" as *;
+
+.heroSection {
+  // Color of the borders of the image
+  background-color: #03090a;
+
+  position: relative;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: min-content;
+  justify-items: center;
+
+  max-width: 170rem;
+  margin: 0 auto;
+}
+
+.heroImg {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+}
+
+.textBox {
+  position: relative;
+  z-index: 2;
+  grid-row: 1 / -1;
+  grid-column: 1 / span 1;
+  align-self: center;
+  justify-self: start;
+  margin-left: $spacing-xl;
+
+  max-width: 64rem;
+  color: $color-grey-1;
+  padding: $spacing-xl;
+  padding-right: $spacing-xxl;
+  background-color: rgba($color-grey-5, 0.3);
+  border-radius: $border-radius-small;
+
+  h1 {
+    font-size: $font-size-xxl;
+    font-weight: $font-weight-bold;
+    letter-spacing: $letter-spacing-tight;
+    line-height: $line-height-tight;
+    margin-bottom: $spacing-xxl;
+  }
+
+  span {
+    display: inline-block;
+    font-size: $font-size-lg;
+    color: $color-grey-3;
+
+    margin-bottom: $spacing-lg;
+  }
+
+  button {
+    box-shadow: 0 0 8rem rgba($color-primary-tint-2, 0.8);
+  }
+}

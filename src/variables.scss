@@ -1,0 +1,114 @@
+// ==============================
+// 🎨 DESIGN SYSTEM VARIABLES
+// ==============================
+
+// ------------------------------
+// 01. TYPOGRAPHY
+// ------------------------------
+
+// Font sizes
+// TODO IMPORTANT make smallest font size 16 px in inputs, since lower sizes make phone browsers to zoom in
+// https://typescale.com/
+// TYPOGRAPHY SCALE — Perfect Fourth (Ratio: 1.333)
+$font-size-xxs: 0.636rem; // ≈ 6.36px
+$font-size-xs: 0.848rem; // ≈ 8.48px
+$font-size-sm: 1.131rem; // ≈11.31px
+$font-size-base: 1.6rem; // 16px
+$font-size-md: 2.133rem; // ≈21.33px
+$font-size-lg: 2.842rem; // ≈28.42px
+$font-size-xl: 3.786rem; // ≈37.86px
+$font-size-xxl: 5.045rem; // ≈50.45px
+$font-size-xxxl: 6.717rem; // ≈67.17px
+
+// Font weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line heights
+$line-height-tight: 1.05; // Big titles
+$line-height-heading: 1.2; // Regular headings
+$line-height-default: 1.6; // Paragraphs
+$line-height-loose: 1.8;
+
+// Letter spacing
+$letter-spacing-tight: -0.5px;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.75px;
+
+// ------------------------------
+// 02. COLORS
+// ------------------------------
+
+// PRIMARY
+$color-primary: #38405f;
+
+// Tints
+// https://maketintsandshades.com/
+$color-primary-tint-1: #5a6680;
+$color-primary-tint-2: #7c87a0;
+$color-primary-tint-3: #9ea8c1;
+
+// Shades
+// https://maketintsandshades.com/
+$color-primary-shade-1: #2e344e;
+$color-primary-shade-2: #25293e;
+$color-primary-shade-3: #1b1f2d;
+
+// SECONDARY
+// https://paletton.com
+$color-secondary: #5f3f38;
+
+// Tints
+$color-secondary-tint-1: #7a5e58;
+$color-secondary-tint-2: #a78c88;
+
+// Shades
+$color-secondary-shade-1: #4c332d;
+$color-secondary-shade-2: #392621;
+
+// GREYSCALE
+$color-grey-1: #f7f8fa; // lighetst background
+$color-grey-2: #e3e6ee; // cards, inputs
+$color-grey-3: #c5c8d3; // border, lines
+$color-grey-4: #9093a0; // secondary text
+$color-grey-5: #2a2a35; // main text
+
+// FEEDBACK COLORS
+$color-success: #5cc18c;
+$color-error: #d66f6f;
+$color-warning: #e8b85d;
+$color-info: #4c9eff;
+
+// ------------------------------
+// 05. SHADOWS
+// ------------------------------
+
+// Shadow used for cards, modals, etc.
+$shadow-default: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075); // TODO modify?
+
+// ------------------------------
+// 06. BORDER RADIUS
+// ------------------------------
+
+$border-radius-small: 0.7rem; // TODO modify
+$border-radius-base: 0.4rem; // TODO modify
+
+// ------------------------------
+// 07. SPACING SCALE
+// ------------------------------
+
+// SPACING SCALE — White space para márgenes y paddings
+// 1rem = 10px
+// Basado en un paso base de 1.6rem = 16px
+
+$spacing-xxs: 0.4rem; // 4px
+$spacing-xs: 0.8rem; // 8px
+$spacing-sm: 1.2rem; // 12px
+$spacing-md: 1.6rem; // 16px
+$spacing-lg: 2.4rem; // 24px
+$spacing-xl: 3.2rem; // 32px
+$spacing-xxl: 4.8rem; // 48px
+$spacing-xxxl: 6.4rem; // 64px
+$spacing-huge: 9.6rem; // 96px

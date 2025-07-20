@@ -1,5 +1,15 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LandingPage from "./pages/LandingPage.jsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage />,
+  },
+]);
+
 function App() {
-  return <div>ecommerce</div>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;

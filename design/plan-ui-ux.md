@@ -120,15 +120,15 @@ Startup/upbeat:
 
 - /
 
-  - Navigation
-  - Hero
-  - Problem
-  - Amplify
-  - Story
-  - Testimonial
-  - Offer
-  - Response (CTA)
-  - Footer
+  - V Navigation
+  - V Hero + Headline [Problem]
+  - V Subheadline + pain [Amplify]
+  - V Features / benefits [Solution(Story, System?) + Transformation]
+  - V Testimonial [Transformation]
+  - V Pricing [Offer]
+  - V FAQs / Guarantees [Offer + Response]
+  - V CTA [Response]
+  - V Footer
 
 - /cart
 
