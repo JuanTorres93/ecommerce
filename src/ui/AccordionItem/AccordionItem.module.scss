@@ -1,0 +1,45 @@
+@use "../../variables" as *;
+
+.item {
+  border-bottom: 1px solid #ccc;
+}
+
+.itemBtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: $spacing-md;
+  font-size: $font-size-md;
+  color: $color-grey-5;
+  background-color: transparent;
+  border: none;
+}
+
+.itemBtn:hover {
+  background-color: $color-grey-2;
+}
+
+.itemBtnExpanded {
+  background-color: $color-grey-3;
+}
+
+.itemContent {
+  transition: height 0.25s cubic-bezier(0, 0, 0, 1);
+  color: $color-grey-4;
+  line-height: 1.5;
+}
+
+.itemPanel {
+  padding: 1rem;
+}
+
+.chevron {
+  margin-left: auto;
+  transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.itemBtnExpanded .chevron {
+  transform: rotate(180deg);
+}
