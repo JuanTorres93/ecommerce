@@ -1,6 +1,8 @@
 @use "../../variables.scss" as *;
 
-.btn {
+.btn,
+.btn:link,
+.btn:visited {
   background-color: $color-grey-2;
   padding: $spacing-xs $spacing-md;
   border: none;
@@ -8,17 +10,22 @@
   font-size: $font-size-md;
   transition: all 0.3s ease;
   border-radius: $border-radius-base;
+  text-decoration: none;
 }
 
-.primary {
+.primary,
+.primary:link,
+.primary:visited {
   background-color: $color-primary;
   color: $color-grey-1;
 
   &:hover {
     background-color: $color-primary-tint-1;
+    color: $color-grey-1 !important; // Include for the case when btn is a Link element
   }
 
   &:active {
     background-color: $color-primary-shade-1;
+    color: $color-grey-1 !important; // Include for the case when btn is a Link element
   }
 }

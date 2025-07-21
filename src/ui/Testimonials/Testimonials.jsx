@@ -34,7 +34,7 @@ const testimonialsData = [
 
 function Testimonials() {
   return (
-    <section className={styles.testimonialsSection}>
+    <section id="testimonials" className={styles.testimonialsSection}>
       <div className={styles.testimonials}>
         <div className={styles.titleBox}>
           <Heading type="h2">What our customers say</Heading>

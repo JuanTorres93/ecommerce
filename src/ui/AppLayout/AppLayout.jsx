@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import styles from "./AppLayout.module.scss";
+import Footer from "../Footer/Footer";
 
 function AppLayout() {
   return (
@@ -13,7 +14,7 @@ function AppLayout() {
         <Outlet />
       </main>
 
-      <footer>Footer</footer>
+      <Footer />
     </div>
   );
 }

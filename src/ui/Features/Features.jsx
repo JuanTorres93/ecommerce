@@ -3,7 +3,7 @@ import styles from "./Features.module.scss";
 
 function Features() {
   return (
-    <section className={styles.featuresSection}>
+    <section id="features" className={styles.featuresSection}>
       <Heading type="h2">How Getiow works</Heading>
 
       <div className={styles.features}>

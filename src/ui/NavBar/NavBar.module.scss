@@ -3,6 +3,11 @@
 .navbar {
   background-color: rgba($color-grey-5, 0.95);
 
+  svg {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
   ul {
     display: flex;
     align-items: center;

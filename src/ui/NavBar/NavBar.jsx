@@ -1,43 +1,35 @@
+import Button from "../Button/Button";
+import Logo from "../Logo/Logo";
 import styles from "./NavBar.module.scss";
-
-import { Link } from "react-router-dom";
-
-//   - V Hero + Headline [Problem]
-//   - V Subheadline + pain [Amplify]
-//   - V Features / benefits [Solution(Story, System?) + Transformation]
-//   - V Testimonial [Transformation]
-//   - V Pricing [Offer]
-//   - V FAQs / Guarantees [Offer + Response]
-//   - V CTA [Response]
 
 function NavBar() {
   return (
     <nav className={styles.navbar}>
       <ul>
         <li>
-          <Link>LOGO</Link>
+          <a href="#hero">
+            <Logo />
+          </a>
         </li>
         <li>
-          <Link>Features</Link>
-        </li>
-
-        <li>
-          <Link>Testimonial</Link>
+          <a href="#features">Features</a>
         </li>
 
         <li>
-          <Link>Pricing</Link>
+          <a href="#testimonials">Testimonial</a>
         </li>
 
         <li>
-          <Link>FAQs</Link>
+          <a href="#faqs">FAQs</a>
         </li>
 
         <li>
-          <Link>Contact</Link>
+          <a href="#contact">Contact</a>
         </li>
         <li>
-          <Link>BUTTON/NAME</Link>
+          <Button to="/start" type={"primary"}>
+            Start now
+          </Button>
         </li>
       </ul>
     </nav>

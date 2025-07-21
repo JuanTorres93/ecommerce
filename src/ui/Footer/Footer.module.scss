@@ -1,0 +1,8 @@
+@use "../../variables.scss" as *;
+
+.footer {
+  color: $color-grey-2;
+  padding: $spacing-lg;
+  text-align: center;
+  background-color: $color-primary;
+}

@@ -45,7 +45,7 @@ const faqData = [
 
 function FAQs() {
   return (
-    <section className={styles.faqsSection}>
+    <section id="faqs" className={styles.faqsSection}>
       <div className={styles.faqs}>
         <div className={styles.titleBox}>
           <Heading type="h2">

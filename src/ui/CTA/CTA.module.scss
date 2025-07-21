@@ -1,0 +1,40 @@
+@use "../../variables.scss" as *;
+
+.ctaSection {
+  max-width: 170rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.cta {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+
+  img {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    max-width: 100%;
+  }
+
+  .ctaContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-row: 2;
+    grid-column: 2;
+    position: relative;
+
+    background-color: rgba($color-grey-5, 0.8);
+    padding: $spacing-xxl $spacing-xxxl;
+    border-radius: $border-radius-lg;
+
+    h2 {
+      color: $color-grey-2;
+      text-align: center;
+      margin-bottom: $spacing-xl;
+    }
+  }
+}

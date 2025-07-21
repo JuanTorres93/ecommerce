@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 
 function Hero() {
   return (
-    <section className={styles.heroSection}>
+    <section id="hero" className={styles.heroSection}>
       <div className={styles.hero}>
         <img
           className={styles.heroImg}
@@ -20,7 +20,9 @@ function Hero() {
 
           <span>And deep down, you want to stand out.</span>
 
-          <Button type="primary">Be remembered</Button>
+          <Button to="/start" type="primary">
+            Be remembered
+          </Button>
         </div>
       </div>
     </section>
