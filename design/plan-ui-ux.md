@@ -118,6 +118,8 @@ Startup/upbeat:
 
 ## Sections for each page
 
+<!-- Implemented -->
+
 - /
 
   - V Navigation
@@ -132,7 +134,7 @@ Startup/upbeat:
 
 - /cart
 
-  - Navigation
+  - Header
   - Cart Items
   - Cart total summary
   - Delete cart item
@@ -142,46 +144,46 @@ Startup/upbeat:
 - /product
   (All products are shown)
 
-  - Navigation
+  - Header
   - Grid with products
   - Product name and price
   - Filter by price
-  - Footer
+  - Cart summary
 
 - /product/:productId
 
-  - Navigation
+  - Header
   - Product name
   - Product description
   - Product rates
   - Product comments
-  - Footer
+  - Cart summary
 
 - /checkout
 
-  - Navigation
+  - Header
   - Cart Summary
   - User info
     - Address
     - Email
     - Phone number
   - Confirm checkout and pay
-  - Footer
+  - Cart summary
 
 - /order/:orderId
 
-  - Navigation
+  - Header
   - Items in order
     - Quantity
     - Total price
   - Where order was sent
-  - Footer
+  - Cart summary
 
 - /start
 
-  - Navigation
+  - Header
   - Form with user name
-  - Footer
+  - Cart summary
 
 # Design and build
 

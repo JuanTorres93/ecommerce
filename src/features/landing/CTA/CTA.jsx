@@ -1,5 +1,5 @@
-import Button from "../Button/Button";
-import Heading from "../Heading/Heading";
+import Button from "../../../ui/Button/Button";
+import Heading from "../../../ui/Heading/Heading";
 import styles from "./CTA.module.scss";
 
 function CTA() {

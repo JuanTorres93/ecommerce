@@ -1,5 +1,5 @@
-import Button from "../Button/Button";
-import Logo from "../Logo/Logo";
+import Button from "../../../ui/Button/Button";
+import Logo from "../../../ui/Logo/Logo";
 import styles from "./NavBar.module.scss";
 
 function NavBar() {

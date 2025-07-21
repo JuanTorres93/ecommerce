@@ -1,5 +1,5 @@
 import styles from "./Testimonials.module.scss";
-import Heading from "../Heading/Heading";
+import Heading from "../../../ui/Heading/Heading";
 
 const testimonialsData = [
   {

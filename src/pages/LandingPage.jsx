@@ -1,9 +1,9 @@
-import Hero from "../ui/Hero/Hero";
-import Subheadline from "../ui/Subheadline/Subheadline";
-import Features from "../ui/Features/Features";
-import Testimonials from "../ui/Testimonials/Testimonials";
-import FAQs from "../ui/FAQs/FAQs";
-import CTA from "../ui/CTA/CTA";
+import Hero from "../features/landing/Hero/Hero";
+import Subheadline from "../features/landing/Subheadline/Subheadline";
+import Features from "../features/landing/Features/Features";
+import Testimonials from "../features/landing/Testimonials/Testimonials";
+import FAQs from "../features/landing/FAQs/FAQs";
+import CTA from "../features/landing/CTA/CTA";
 
 function LandingPage() {
   return (

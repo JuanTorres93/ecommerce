@@ -1,7 +1,7 @@
 import { Accordion } from "@szhsin/react-accordion";
 
-import Heading from "../Heading/Heading";
-import AccordionItem from "../AccordionItem/AccordionItem";
+import Heading from "../../../ui/Heading/Heading";
+import AccordionItem from "../../../ui/AccordionItem/AccordionItem";
 import styles from "./FAQs.module.scss";
 
 const faqData = [

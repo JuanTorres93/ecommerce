@@ -1,4 +1,4 @@
-import Heading from "../Heading/Heading";
+import Heading from "../../../ui/Heading/Heading";
 import styles from "./Features.module.scss";
 
 function Features() {
