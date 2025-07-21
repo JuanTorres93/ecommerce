@@ -1,0 +1,73 @@
+@use "../../variables.scss" as *;
+
+.featuresSection {
+  background-color: $color-primary-tint-1;
+  padding-top: $spacing-xxxl;
+  padding-bottom: $spacing-xxxl;
+
+  h2 {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: $spacing-lg;
+    color: $color-grey-2;
+  }
+}
+
+.features {
+  // Autogrid
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-auto-rows: min-content;
+
+  gap: $spacing-lg;
+  padding: $spacing-lg;
+  max-width: 170rem;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  color: $color-secondary-tint-2;
+  max-width: 40rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow: $shadow-default;
+    overflow: hidden;
+    flex-grow: 1;
+    background-color: $color-primary-tint-2;
+
+    border-radius: $border-radius-xl;
+    padding: 1rem 2rem;
+
+    img {
+      max-width: 100%;
+      border-radius: $border-radius-lg;
+      margin-top: $spacing-md;
+      margin-bottom: $spacing-sm;
+    }
+  }
+
+  &__number {
+    font-size: $font-size-xxxl;
+  }
+
+  &__title {
+    color: $color-secondary-tint-2;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-md;
+  }
+
+  &__description {
+    font-size: $font-size-base;
+    line-height: $line-height-default;
+    letter-spacing: $letter-spacing-normal;
+    color: $color-grey-2;
+  }
+}

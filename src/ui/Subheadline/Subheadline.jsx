@@ -1,10 +1,13 @@
+import Heading from "../Heading/Heading";
 import styles from "./Subheadline.module.scss";
 
 function Subheadline() {
   return (
     <section className={styles.subheadlineSection}>
       <div className={styles.subheadline}>
-        <h2>Without a unique edge, you risk blending into the background.</h2>
+        <Heading type="h2">
+          Without a unique edge, you risk blending into the background.
+        </Heading>
 
         <div className={styles.container}>
           <div className={styles.left}>

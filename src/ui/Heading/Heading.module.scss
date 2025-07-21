@@ -1,0 +1,10 @@
+@use "../../variables.scss" as *;
+.h2 {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  color: $color-grey-5;
+  max-width: 65rem;
+  line-height: $line-height-heading;
+  letter-spacing: $letter-spacing-tight;
+}

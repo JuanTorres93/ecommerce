@@ -1,7 +1,7 @@
 @use "../../variables.scss" as *;
 
 .navbar {
-  background-color: $color-grey-5;
+  background-color: rgba($color-grey-5, 0.95);
 
   ul {
     display: flex;
