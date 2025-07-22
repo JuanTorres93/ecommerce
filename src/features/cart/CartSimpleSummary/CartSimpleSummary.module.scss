@@ -1,0 +1,11 @@
+@use "../../../variables.scss" as *;
+
+.cartSimpleSummary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-grey-5;
+  padding: 2rem 4rem;
+  color: $color-grey-1;
+  font-weight: $font-weight-semibold;
+}

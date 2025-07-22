@@ -3,6 +3,7 @@ import styles from "./AppLayout.module.scss";
 
 import NavBar from "../../ui/NavBar/NavBar";
 import Input from "../Input/Input";
+import CartSimpleSummary from "../../features/cart/CartSimpleSummary/CartSimpleSummary";
 
 function AppLayout() {
   return (
@@ -17,7 +18,10 @@ function AppLayout() {
         <Outlet />
       </main>
 
-      <footer>App footer</footer>
+      {/* TODO show only if cart is not empty */}
+      <footer>
+        <CartSimpleSummary />
+      </footer>
     </div>
   );
 }
