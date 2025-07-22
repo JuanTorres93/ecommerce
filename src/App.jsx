@@ -6,6 +6,7 @@ import {
 import LandingPage from "./pages/LandingPage.jsx";
 import LandingLayout from "./features/landing/LandingLayout/LandingLayout";
 import AppLayout from "./ui/AppLayout/AppLayout.jsx";
+import ProductPage from "./pages/ProductPage/ProductPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "product",
-        element: <div>Product Page</div>,
+        element: <ProductPage />,
       },
     ],
   },

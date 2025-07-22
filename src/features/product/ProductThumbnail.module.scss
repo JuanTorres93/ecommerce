@@ -1,0 +1,30 @@
+@use "../../variables.scss" as *;
+
+.productThumbnail {
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: $border-radius-base;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius-lg;
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 $spacing-xs;
+
+  span {
+    color: $color-grey-4;
+    font-weight: $font-weight-semibold;
+  }
+}

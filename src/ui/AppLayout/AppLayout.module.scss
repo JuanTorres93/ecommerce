@@ -1,16 +1,29 @@
 @use "../../variables.scss" as *;
 
 .appLayout {
-  // position: relative;
-  // display: flex;
-  // flex-direction: column;
-  // height: 100dvh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow-y: scroll;
 
   header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
     // username
     nav ul li span {
       color: $color-grey-2;
       font-weight: $font-weight-semibold;
     }
+  }
+
+  main {
+    flex: 1;
+    // Margin top to avoid overlap with fixed header
+    margin-top: 7rem;
   }
 }

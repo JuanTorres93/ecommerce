@@ -36,3 +36,17 @@
   background-color: transparent;
   color: $color-grey-1;
 }
+
+.small,
+.small:link,
+.small:visited {
+  font-size: $font-size-base;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $border-radius-lg;
+  background-color: $color-grey-3;
+
+  &:hover,
+  &:active {
+    background-color: $color-grey-4;
+  }
+}
