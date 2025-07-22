@@ -29,3 +29,10 @@
     color: $color-grey-1 !important; // Include for the case when btn is a Link element
   }
 }
+
+.transparent,
+.transparent:link,
+.transparent:visited {
+  background-color: transparent;
+  color: $color-grey-1;
+}

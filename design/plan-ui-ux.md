@@ -132,6 +132,8 @@ Startup/upbeat:
   - V CTA [Response]
   - V Footer
 
+<!-- Sketched \/ -->
+
 - /cart
 
   - Header
@@ -140,6 +142,8 @@ Startup/upbeat:
   - Delete cart item
   - Update cart item
   - Footer
+
+<!-- Sketched \/ -->
 
 - /product
   (All products are shown)
@@ -150,6 +154,8 @@ Startup/upbeat:
   - Filter by price
   - Cart summary
 
+<!-- Sketched \/ -->
+
 - /product/:productId
 
   - Header
@@ -159,6 +165,8 @@ Startup/upbeat:
   - Product comments
   - Cart summary
 
+<!-- Sketched \/ -->
+
 - /checkout
 
   - Header
@@ -167,8 +175,9 @@ Startup/upbeat:
     - Address
     - Email
     - Phone number
-  - Confirm checkout and pay
-  - Cart summary
+  - Confirm checkout and go to stripe checkout
+
+<!-- Sketched \/ -->
 
 - /order/:orderId
 
@@ -179,11 +188,13 @@ Startup/upbeat:
   - Where order was sent
   - Cart summary
 
+<!-- Sketched \/ -->
+
 - /start
 
   - Header
   - Form with user name
-  - Cart summary
+  - Footer
 
 # Design and build
 

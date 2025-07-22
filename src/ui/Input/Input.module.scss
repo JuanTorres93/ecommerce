@@ -1,0 +1,15 @@
+@use "../../variables.scss" as *;
+
+.input {
+  border: 1px solid $color-grey-3;
+  border-radius: $border-radius-base;
+
+  padding: 0.5rem 1rem;
+  font-size: $font-size-base;
+  font-family: inherit;
+
+  &:focus {
+    border-color: $color-primary;
+    outline: none;
+  }
+}
