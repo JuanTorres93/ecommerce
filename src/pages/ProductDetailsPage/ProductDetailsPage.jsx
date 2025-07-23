@@ -1,5 +1,5 @@
-import ProductThumbnail from "../../features/product/ProductThumbnail/ProductThumbnail";
-import styles from "./ProductPage.module.scss";
+import ProductDetails from "../../features/product/ProductDetails/ProductDetails";
+import styles from "./ProductDetailsPage.module.scss";
 
 const fakeProduct = {
   id: 149,
@@ -26,22 +26,12 @@ const fakeProduct = {
   updatedAt: "2025-07-22T11:25:57.000Z",
 };
 
-function ProductPage() {
+function ProductDetailsPage() {
   return (
-    <section className={styles.productPage}>
-      <div className={styles.products}>
-        {/* Array of 30 numbers */}
-        {Array.from({ length: 30 }, (_, i) => (
-          <ProductThumbnail
-            key={i}
-            img={fakeProduct.images[0]}
-            title={fakeProduct.title}
-            price={fakeProduct.price}
-          />
-        ))}
-      </div>
-    </section>
+    <div className={styles.ProductDetailsPage}>
+      <ProductDetails product={fakeProduct} />
+    </div>
   );
 }
 
-export default ProductPage;
+export default ProductDetailsPage;

@@ -8,6 +8,7 @@ import LandingLayout from "./features/landing/LandingLayout/LandingLayout";
 import AppLayout from "./ui/AppLayout/AppLayout.jsx";
 import ProductPage from "./pages/ProductPage/ProductPage.jsx";
 import StartPage from "./pages/StartPage/StartPage.jsx";
+import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "product",
         element: <ProductPage />,
+      },
+      {
+        path: "product/:productId",
+        element: <ProductDetailsPage />,
       },
     ],
   },

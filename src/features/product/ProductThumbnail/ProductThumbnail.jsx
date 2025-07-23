@@ -1,5 +1,5 @@
-import Button from "../../ui/Button/Button";
-import UpdateQuantity from "../cart/UpdateQuantity/UpdateQuantity";
+import Button from "../../../ui/Button/Button";
+import UpdateQuantity from "../../cart/UpdateQuantity/UpdateQuantity";
 import styles from "./ProductThumbnail.module.scss";
 
 function ProductThumbnail({ img, title, price }) {
