@@ -9,4 +9,10 @@
   h2 {
     grid-column: 1 / -1;
   }
+
+  .CartSummaryWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
 }

@@ -52,3 +52,18 @@
     background-color: $color-grey-4;
   }
 }
+
+.rounded,
+.rounded:link,
+.rounded:visited {
+  font-size: $font-size-base;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: 1000rem;
+  background-color: $color-primary;
+  color: $color-grey-1;
+
+  &:hover,
+  &:active {
+    background-color: $color-primary-tint-1;
+  }
+}

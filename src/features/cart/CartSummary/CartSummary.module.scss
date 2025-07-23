@@ -1,0 +1,48 @@
+@use "../../../variables" as *;
+
+$row-spacing: $spacing-lg;
+
+.CartSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  max-width: 35rem;
+  padding: $row-spacing;
+  border: 1px solid $color-grey-3;
+  border-radius: $border-radius-xl;
+  //   max-height: 40rem;
+}
+
+.rowPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.value {
+  font-weight: $font-weight-semibold;
+  color: $color-grey-5;
+}
+
+.discountValue {
+  color: $color-error;
+}
+
+.rowTotal {
+  border-top: 1px solid $color-grey-3;
+  padding-top: calc($row-spacing / 2);
+}
+
+.discount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-lg;
+  margin-top: $spacing-md;
+
+  input {
+    flex: 1;
+    max-width: 20rem;
+  }
+}
