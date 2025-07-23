@@ -32,12 +32,7 @@ function ProductPage() {
       <div className={styles.products}>
         {/* Array of 30 numbers */}
         {Array.from({ length: 30 }, (_, i) => (
-          <ProductThumbnail
-            key={i}
-            img={fakeProduct.images[0]}
-            title={fakeProduct.title}
-            price={fakeProduct.price}
-          />
+          <ProductThumbnail key={i} product={fakeProduct} />
         ))}
       </div>
     </section>

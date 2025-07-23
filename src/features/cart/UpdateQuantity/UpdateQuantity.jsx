@@ -1,6 +1,6 @@
 import styles from "./UpdateQuantity.module.scss";
 
-function UpdateQuantity() {
+function UpdateQuantity({ id }) {
   return (
     <div className={styles.updateQuantity}>
       <button className={styles.btn}>-</button>

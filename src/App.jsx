@@ -9,6 +9,7 @@ import AppLayout from "./ui/AppLayout/AppLayout.jsx";
 import ProductPage from "./pages/ProductPage/ProductPage.jsx";
 import StartPage from "./pages/StartPage/StartPage.jsx";
 import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage.jsx";
+import CartPage from "./pages/CartPage/CartPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "product/:productId",
         element: <ProductDetailsPage />,
+      },
+      {
+        path: "cart",
+        element: <CartPage />,
       },
     ],
   },

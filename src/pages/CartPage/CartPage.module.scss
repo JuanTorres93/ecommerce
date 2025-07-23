@@ -1,0 +1,12 @@
+@use "../../variables" as *;
+
+.CartPage {
+  padding: $spacing-xxl;
+
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+
+  h2 {
+    grid-column: 1 / -1;
+  }
+}
