@@ -1,0 +1,21 @@
+@use "../../variables" as *;
+
+.OrderPage {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-lg;
+  padding: $spacing-lg;
+  max-width: 170rem;
+  margin: 0 auto;
+  padding: $spacing-lg;
+  max-width: 85rem;
+
+  h2 {
+    margin-bottom: $spacing-md;
+  }
+}
+
+.cartWrapper {
+  justify-self: end;
+  width: 25rem;
+}

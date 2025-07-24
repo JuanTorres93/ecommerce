@@ -165,7 +165,7 @@ Startup/upbeat:
   - Product comments
   - Cart summary
 
-<!-- Sketched \/ -->
+<!-- NOT NEEDED Sketched \/ -->
 
 - /checkout
 

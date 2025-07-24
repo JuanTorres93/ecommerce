@@ -5,12 +5,14 @@ import styles from "./CartPage.module.scss";
 
 function CartPage() {
   return (
-    <div className={styles.CartPage}>
-      <Heading type="h2">Your cart</Heading>
-      <Cart />
+    <div className={styles.wrapper}>
+      <div className={styles.CartPage}>
+        <Heading type="h2">Your cart</Heading>
+        <Cart />
 
-      <div className={styles.CartSummaryWrapper}>
-        <CartSummary />
+        <div className={styles.CartSummaryWrapper}>
+          <CartSummary />
+        </div>
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import LandingPage from "./pages/LandingPage.jsx";
 import LandingLayout from "./features/landing/LandingLayout/LandingLayout";
 import AppLayout from "./ui/AppLayout/AppLayout.jsx";
 import ProductPage from "./pages/ProductPage/ProductPage.jsx";
+import OrderPage from "./pages/OrderPage/OrderPage.jsx";
 import StartPage from "./pages/StartPage/StartPage.jsx";
 import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage.jsx";
 import CartPage from "./pages/CartPage/CartPage.jsx";
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "cart",
         element: <CartPage />,
+      },
+      {
+        path: "order/:orderId",
+        element: <OrderPage />,
       },
     ],
   },

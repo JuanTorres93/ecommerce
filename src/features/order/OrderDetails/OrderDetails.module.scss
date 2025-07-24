@@ -1,0 +1,64 @@
+@use "../../../variables" as *;
+
+.OrderDetails {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-grey-2;
+  border-radius: $border-radius-xl;
+}
+
+.OrderItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  border-bottom: 1px solid $color-grey-2;
+
+  img {
+    max-width: 10rem;
+    border-radius: $border-radius-xl;
+  }
+
+  .itemInfo {
+    flex-grow: 1;
+
+    h3 {
+      font-size: $font-size-base;
+      color: $color-grey-4;
+      font-weight: $font-weight-semibold;
+    }
+
+    p {
+      color: $color-grey-3;
+    }
+  }
+
+  .itemPrice {
+    color: $color-primary;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+.ItemDetails {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  align-items: flex-end;
+  p {
+    color: $color-grey-4;
+    font-size: $font-size-sm;
+  }
+
+  .price {
+    color: $color-grey-5;
+    font-size: $font-size-md;
+    font-weight: $font-weight-regular;
+  }
+}
+
+.ItemInfo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}

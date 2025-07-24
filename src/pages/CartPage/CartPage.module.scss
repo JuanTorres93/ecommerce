@@ -1,6 +1,13 @@
 @use "../../variables" as *;
 
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
 .CartPage {
+  max-width: 170rem;
+  margin: 0 auto;
   padding: $spacing-xxl;
 
   display: grid;
