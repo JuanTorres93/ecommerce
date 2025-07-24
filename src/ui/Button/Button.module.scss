@@ -4,6 +4,7 @@
 .btn:link,
 .btn:visited {
   background-color: $color-grey-2;
+  color: $color-grey-5;
   padding: $spacing-xs $spacing-md;
   border: none;
   cursor: pointer;
@@ -13,6 +14,18 @@
   text-decoration: none;
   text-align: center;
   font-weight: $font-weight-regular;
+
+  &:disabled {
+    background-color: $color-grey-3;
+    color: $color-grey-4;
+    cursor: not-allowed;
+
+    &:hover,
+    &:active {
+      background-color: $color-grey-3 !important;
+      color: $color-grey-4 !important;
+    }
+  }
 }
 
 .primary,

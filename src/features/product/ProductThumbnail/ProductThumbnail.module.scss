@@ -10,7 +10,7 @@
   border-radius: $border-radius-base;
 
   img {
-    width: 100%;
+    max-width: 30rem;
     height: auto;
     border-radius: $border-radius-lg;
     cursor: pointer;

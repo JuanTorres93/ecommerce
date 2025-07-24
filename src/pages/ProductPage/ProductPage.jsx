@@ -1,4 +1,6 @@
+import { useLoaderData } from "react-router-dom";
 import ProductThumbnail from "../../features/product/ProductThumbnail/ProductThumbnail";
+import { getProducts } from "../../services/productsAPI";
 import styles from "./ProductPage.module.scss";
 
 const fakeProduct = {
@@ -27,16 +29,22 @@ const fakeProduct = {
 };
 
 function ProductPage() {
+  const products = useLoaderData();
+
   return (
     <section className={styles.productPage}>
       <div className={styles.products}>
-        {/* Array of 30 numbers */}
-        {Array.from({ length: 30 }, (_, i) => (
-          <ProductThumbnail key={i} product={fakeProduct} />
-        ))}
+        {products?.map((product) => (
+          <ProductThumbnail key={product.id} product={product} />
+        )) || <p>No products available</p>}
       </div>
     </section>
   );
+}
+
+export async function loader() {
+  const products = await getProducts();
+  return products;
 }
 
 export default ProductPage;

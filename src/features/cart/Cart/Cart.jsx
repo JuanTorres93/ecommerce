@@ -1,25 +1,12 @@
-import React from "react";
+import { useSelector } from "react-redux";
+
+import { getCart } from "./cartSlice";
 import styles from "./Cart.module.scss";
 import UpdateQuantity from "../UpdateQuantity/UpdateQuantity";
 
-const fakeCartData = [
-  {
-    id: 1,
-    name: "Pizza Margherita",
-    quantity: 2,
-    price: 8.99,
-    img: "/images/users/user1.jpg",
-  },
-  {
-    id: 2,
-    name: "Pizza Pepperoni",
-    quantity: 1,
-    price: 9.99,
-    img: "/images/users/user2.jpg",
-  },
-];
-
 function Cart() {
+  const cart = useSelector(getCart);
+
   return (
     <div className={styles.Cart}>
       <div className={styles.grid}>
@@ -28,7 +15,7 @@ function Cart() {
         <h3 className={styles.tableHeader}>Quantity</h3>
         <h3 className={styles.tableHeader}>Total Price</h3>
       </div>
-      {fakeCartData.map((item) => (
+      {cart.map((item) => (
         <CartItem key={item.id} item={item} />
       ))}
     </div>
@@ -42,13 +29,13 @@ function CartItem({ item }) {
         <img src={item.img} alt={item.name} className={styles.ItemImage} />
         <h3>{item.name}</h3>
       </div>
-      <span className={styles.price}>{item.price.toFixed(2)} €</span>
+      <span className={styles.price}>{item.unitPrice.toFixed(2)} €</span>
       {/* <span>{item.quantity}</span> */}
       <span>
-        <UpdateQuantity id={item.id} />
+        <UpdateQuantity id={item.itemId} />
       </span>
       <span className={styles.totalPrice}>
-        {(item.quantity * item.price).toFixed(2)} €
+        {(item.quantity * item.unitPrice).toFixed(2)} €
       </span>
     </div>
   );

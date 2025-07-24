@@ -1,10 +1,24 @@
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import Button from "../../../ui/Button/Button";
-import UpdateQuantity from "../../cart/UpdateQuantity/UpdateQuantity";
+
+import { getCartItemById } from "../../cart/Cart/cartSlice";
 import styles from "./ProductThumbnail.module.scss";
+
+import UpdateQuantity from "../../cart/UpdateQuantity/UpdateQuantity";
+import AddToCart from "../../cart/AddToCart/AddToCart";
 
 function ProductThumbnail({ product }) {
   const navigate = useNavigate();
+
+  const isInCart = useSelector(getCartItemById(product?.id));
+
+  const item = {
+    itemId: product?.id,
+    name: product?.title,
+    unitPrice: product?.price,
+    quantity: 1,
+    img: product?.images?.at(0),
+  };
 
   function handleGoToDetails() {
     navigate(`/app/product/${product?.id}`);
@@ -18,9 +32,8 @@ function ProductThumbnail({ product }) {
       <div className={styles.info}>
         <span>{product?.price} €</span>
 
-        {/* TODO render conditionally based on cart state */}
-        <Button type="small">Add to Cart</Button>
-        <UpdateQuantity />
+        {!isInCart && <AddToCart item={item} />}
+        {isInCart && <UpdateQuantity id={item?.itemId} />}
       </div>
     </article>
   );

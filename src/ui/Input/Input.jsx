@@ -1,7 +1,7 @@
 import styles from "./Input.module.scss";
 
 function Input({ type, value, onChange, placeholder }) {
-  if (value && onChange)
+  if (value || onChange) {
     return (
       <input
         className={styles.input}
@@ -11,6 +11,7 @@ function Input({ type, value, onChange, placeholder }) {
         placeholder={placeholder}
       />
     );
+  }
 
   return (
     <input

@@ -6,11 +6,14 @@ import {
 import LandingPage from "./pages/LandingPage.jsx";
 import LandingLayout from "./features/landing/LandingLayout/LandingLayout";
 import AppLayout from "./ui/AppLayout/AppLayout.jsx";
-import ProductPage from "./pages/ProductPage/ProductPage.jsx";
+import ProductPage, {
+  loader as productLoader,
+} from "./pages/ProductPage/ProductPage.jsx";
 import OrderPage from "./pages/OrderPage/OrderPage.jsx";
 import StartPage from "./pages/StartPage/StartPage.jsx";
 import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage.jsx";
 import CartPage from "./pages/CartPage/CartPage.jsx";
+import { loader as productDetailsLoader } from "./features/product/ProductDetails/ProductDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -37,10 +40,12 @@ const router = createBrowserRouter([
       {
         path: "product",
         element: <ProductPage />,
+        loader: productLoader,
       },
       {
         path: "product/:productId",
         element: <ProductDetailsPage />,
+        loader: productDetailsLoader,
       },
       {
         path: "cart",

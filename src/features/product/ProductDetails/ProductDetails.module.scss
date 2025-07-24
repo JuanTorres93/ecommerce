@@ -37,8 +37,14 @@
   max-width: 10rem;
   max-height: 10rem;
   border-radius: $border-radius-base;
-
   cursor: pointer;
+  transition: all 0.2s ease-out;
+  filter: grayscale(85%);
+
+  &:hover,
+  &--active {
+    filter: grayscale(0%);
+  }
 }
 
 .textContainer {
