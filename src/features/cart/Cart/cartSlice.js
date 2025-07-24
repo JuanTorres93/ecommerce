@@ -64,11 +64,21 @@ const cartSlice = createSlice({
         cartSlice.caseReducers.removeItem(state, action);
       }
     },
+
+    clearCart: (state) => {
+      // Clear the cart by resetting it to an empty array
+      state.cart = [];
+    },
   },
 });
 
-export const { addItem, removeItem, increaseQuantity, decreaseQuantity } =
-  cartSlice.actions;
+export const {
+  addItem,
+  clearCart,
+  removeItem,
+  increaseQuantity,
+  decreaseQuantity,
+} = cartSlice.actions;
 
 // Selectors
 // by convention, selectors should be named getSomething

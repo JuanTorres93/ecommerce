@@ -1,18 +1,28 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-import { validCoupons } from "../Cart/cartSlice.js";
-import { getTotalPrice } from "../Cart/cartSlice.js";
+import {
+  getTotalPrice,
+  validCoupons,
+  getCart,
+  clearCart,
+} from "../Cart/cartSlice.js";
+import { addOrder } from "../../order/orderSlice.js";
 import Input from "../../../ui/Input/Input.jsx";
 import Button from "../../../ui/Button/Button.jsx";
 import styles from "./CartSummary.module.scss";
 
 function CartSummary({ showDiscountCode = true, showCheckout = true }) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [discountCode, setDiscountCode] = useState("");
   const [discountValue, setDiscountValue] = useState(0);
   const discountIsValid = validCoupons.includes(discountCode);
 
   const totalPrice = useSelector(getTotalPrice);
+  const cartItems = useSelector(getCart);
 
   const applyDiscount = () => {
     if (discountIsValid) {
@@ -30,7 +40,39 @@ function CartSummary({ showDiscountCode = true, showCheckout = true }) {
     setDiscountCode("");
   };
 
-  const handleCreateOrder = () => {};
+  const handleCreateOrder = () => {
+    if (cartItems.length === 0) {
+      alert(
+        "Your cart is empty. Please add items to your cart before proceeding."
+      );
+      return;
+    }
+
+    const orderItems = cartItems.map((item) => ({
+      id: item.itemId,
+      name: item.name,
+      quantity: item.quantity,
+      price: item.unitPrice,
+      img: item.img,
+    }));
+
+    const newOrder = {
+      id: crypto.randomUUID(), // Generate a unique ID for the order
+      items: orderItems,
+      totalDiscount: discountValue,
+      createdAt: Date.now(),
+    };
+
+    dispatch(addOrder(newOrder));
+    // TODO save order to localStorage
+
+    // Reset the cart after order creation
+    dispatch(clearCart()); // Assuming you have a clearCart action
+    setDiscountValue(0);
+    setDiscountCode("");
+
+    navigate("/app/order/" + newOrder.id);
+  };
 
   return (
     <div className={styles.CartSummary}>
@@ -66,7 +108,11 @@ function CartSummary({ showDiscountCode = true, showCheckout = true }) {
         </div>
       )}
 
-      {showCheckout && <Button type="rounded">Go to Stripe Checkout</Button>}
+      {showCheckout && (
+        <Button onClick={handleCreateOrder} type="rounded">
+          Go to Stripe Checkout
+        </Button>
+      )}
     </div>
   );
 }

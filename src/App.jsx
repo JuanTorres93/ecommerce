@@ -3,6 +3,7 @@ import {
   RouterProvider,
   Navigate,
 } from "react-router-dom";
+import ProtectedRoute from "./pages/ProtectedRoute.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
 import LandingLayout from "./features/landing/LandingLayout/LandingLayout";
 import AppLayout from "./ui/AppLayout/AppLayout.jsx";
@@ -31,7 +32,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/app",
-    element: <AppLayout />, // TODO protect this route
+    element: (
+      <ProtectedRoute>
+        <AppLayout />
+      </ProtectedRoute>
+    ),
     children: [
       {
         index: true,
